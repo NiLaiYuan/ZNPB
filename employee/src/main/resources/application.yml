@@ -1,0 +1,37 @@
+server:
+  port: 9002
+
+spring:
+  application:
+    name: employee
+  datasource:
+    druid:
+      driver-class-name: com.mysql.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/znpb?useUnicode=true&characterEncoding=utf-8&useSSL=false
+      username: root
+      password: password
+
+  mail:
+    protocol: smtp
+    host: smtp.qq.com
+    port: 25
+    username: 1627451419@qq.com
+    password: rwqwtyedujhkechf
+    default-encoding: utf-8
+    properties:
+      mail:
+        debug: true
+
+mybatis:
+  mapper-locations: classpath:mappers/*.xml
+  type-aliases-package: com.bph.commons.pojo
+
+eureka:
+  client:
+    service-url:
+      defaultzone: http://localhost:8761/eureka
+
+
+
+
+
